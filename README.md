@@ -10,9 +10,14 @@ This was done by following Dave Gray NextJs YouTube tutorial. It does not have t
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Tutorials
+## Tutorials
+
 https://www.youtube.com/watch?v=djDgTYrFMAY (1) setup
+
 https://www.youtube.com/watch?v=GjVcSpKCoB8 (2) auth steps with Kinde
+
 https://www.youtube.com/watch?v=tiSm8ZjFQP0 (3) (Neon PostGres DB, Drizzle, etc.)
+
 https://www.youtube.com/watch?v=-55iMEgSLhg (4) Data Layer
+
 https://www.youtube.com/watch?v=bg6KyucKd88 (5) Client side forms (zod)
