@@ -15,3 +15,4 @@ https://www.youtube.com/watch?v=djDgTYrFMAY (1) setup
 https://www.youtube.com/watch?v=GjVcSpKCoB8 (2) auth steps with Kinde
 https://www.youtube.com/watch?v=tiSm8ZjFQP0 (3) (Neon PostGres DB, Drizzle, etc.)
 https://www.youtube.com/watch?v=-55iMEgSLhg (4) Data Layer
+https://www.youtube.com/watch?v=bg6KyucKd88 (5) Client side forms (zod)
