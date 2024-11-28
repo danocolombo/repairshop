@@ -9,3 +9,7 @@ This was done by following Dave Gray NextJs YouTube tutorial. It does not have t
 -   Kinde user auth
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+Tutorials
+
+https://www.youtube.com/watch?v=tiSm8ZjFQP0 (Neon PostGres DB, Drizzle, etc.)
