@@ -21,3 +21,7 @@ https://www.youtube.com/watch?v=tiSm8ZjFQP0 (3) (Neon PostGres DB, Drizzle, etc.
 https://www.youtube.com/watch?v=-55iMEgSLhg (4) Data Layer
 
 https://www.youtube.com/watch?v=bg6KyucKd88 (5) Client side forms (zod)
+
+https://www.youtube.com/watch?v=zjhJ9YTwUiY (6) Type Safe inputs
+
+https://www.youtube.com/watch?v=VueEcnP9LZg (7) Permissions
