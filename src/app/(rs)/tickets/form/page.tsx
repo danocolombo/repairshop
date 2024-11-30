@@ -55,7 +55,7 @@ export default async function TicketFormPage({
             getUser(),
         ]);
         const isManager = managerPermission?.isGranted;
-
+        console.log('isManager', isManager);
         // New ticket form
         if (customerId) {
             const customer = await getCustomer(parseInt(customerId));

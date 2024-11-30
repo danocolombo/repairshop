@@ -20,7 +20,10 @@ import { selectCustomerSchemaType } from '@/zod-schemas/customer';
 type Props = {
     customer: selectCustomerSchemaType;
     ticket?: selectTicketSchemaType;
-    techs?: { id: string; description: string }[];
+    techs?: {
+        id: string;
+        description: string;
+    }[];
     isEditable?: boolean;
 };
 
@@ -30,8 +33,6 @@ export default function TicketForm({
     techs,
     isEditable = true,
 }: Props) {
-    // can tell if a user is a manager if there is techs provided
-    // only managers get techs...
     const isManager = Array.isArray(techs);
 
     const defaultValues: insertTicketSchemaType = {
@@ -57,8 +58,10 @@ export default function TicketForm({
         <div className='flex flex-col gap-1 sm:px-8'>
             <div>
                 <h2 className='text-2xl font-bold'>
-                    {ticket?.id
+                    {ticket?.id && isEditable
                         ? `Edit Ticket # ${ticket.id}`
+                        : ticket?.id
+                        ? `View Ticket # ${ticket.id}`
                         : 'New Ticket Form'}
                 </h2>
             </div>
@@ -67,16 +70,16 @@ export default function TicketForm({
                     onSubmit={form.handleSubmit(submitForm)}
                     className='flex flex-col md:flex-row gap-4 md:gap-8'
                 >
-                    {/* <p>{JSON.stringify(form.getValues())}</p> */}
                     <div className='flex flex-col gap-4 w-full max-w-xs'>
                         <InputWithLabel<insertTicketSchemaType>
                             fieldTitle='Title'
                             nameInSchema='title'
                             disabled={!isEditable}
                         />
+
                         {isManager ? (
                             <SelectWithLabel<insertTicketSchemaType>
-                                fieldTitle='Tech Id'
+                                fieldTitle='Tech ID'
                                 nameInSchema='tech'
                                 data={[
                                     {
@@ -93,6 +96,7 @@ export default function TicketForm({
                                 disabled={true}
                             />
                         )}
+
                         {ticket?.id ? (
                             <CheckboxWithLabel<insertTicketSchemaType>
                                 fieldTitle='Completed'
@@ -101,6 +105,7 @@ export default function TicketForm({
                                 disabled={!isEditable}
                             />
                         ) : null}
+
                         <div className='mt-4 space-y-2'>
                             <h3 className='text-lg'>Customer Info</h3>
                             <hr className='w-4/5' />
@@ -127,7 +132,8 @@ export default function TicketForm({
                             className='h-96'
                             disabled={!isEditable}
                         />
-                        {isEditable && (
+
+                        {isEditable ? (
                             <div className='flex gap-2'>
                                 <Button
                                     type='submit'
@@ -147,7 +153,7 @@ export default function TicketForm({
                                     Reset
                                 </Button>
                             </div>
-                        )}
+                        ) : null}
                     </div>
                 </form>
             </Form>
